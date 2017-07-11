@@ -14,13 +14,14 @@ namespace MvcMusicStore_Web.Models
         // automatically whenever you change your model schema, please use data migrations.
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
-    
+
         public MusicStoreDB() : base("name=MusicStoreDB")
         {
         }
 
-        public System.Data.Entity.DbSet<MvcMusicStore_Web.Models.Album> Albums { get; set; }
+        public DbSet<Album> Albums { get; set; }
 
-        public System.Data.Entity.DbSet<MvcMusicStore_Web.Models.Genre> Genres { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<Artist> Artists { get; set; }
     }
 }
